@@ -1,0 +1,1 @@
+An illustration basic input and output codes
