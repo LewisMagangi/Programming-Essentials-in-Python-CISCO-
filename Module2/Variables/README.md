@@ -1,0 +1,1 @@
+An illustration of variables concepts in C
