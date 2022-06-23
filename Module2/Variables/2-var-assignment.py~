@@ -1,0 +1,4 @@
+var = 1
+print("variable before assignment is :" + var)
+var = var + 1
+print("The new variable after the assignment is:" + var)
