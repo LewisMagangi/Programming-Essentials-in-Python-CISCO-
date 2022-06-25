@@ -1,0 +1,7 @@
+my_list = [10, 1, 8, 3, 5]
+Sum = 0
+
+for i in range(len(my_list)):
+    Sum += my_list[i]
+
+    print(Sum)
