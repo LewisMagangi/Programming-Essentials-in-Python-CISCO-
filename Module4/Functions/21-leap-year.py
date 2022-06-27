@@ -1,14 +1,21 @@
 def is_year_leap(year):
 
-    if (year % 400) != 0 and (year % 4) != 0:
+    if year < 1582:
+        answer = "Not within the Gregorian calendar period"
         return False
-    elif (year % 100) != 0:
-        return True
+    elif (year % 4) == 0:
+        if year % 100 == 0 and year % 400 != 0:
+            answer = " a Common year"
+            return False
+        else:
+            answer = "a Leap year"
+            return True
     else:
-        return True
+        answer = "a Common year"
+        return False
 
 test_data = [1900, 2000, 2016, 1987]
-test_results = [True, True, True, False]
+test_results = [False, True, True, False]
 for i in range(len(test_data)):
     yr = test_data[i]
     print(yr,"->",end="")
