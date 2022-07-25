@@ -1,4 +1,4 @@
-ef my_function():
+def my_function():
     var = 2
     print("Do I know that variable?", var)
 
