@@ -1,0 +1,6 @@
+colors = (("green", "#008000"), ("blue", "#0000FF"))
+
+dictionary = {}
+colors_dictionary = dictionary{colors}   # Write your code here.
+
+print(colors_dictionary)
