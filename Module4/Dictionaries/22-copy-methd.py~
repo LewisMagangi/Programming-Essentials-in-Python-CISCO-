@@ -1,0 +1,8 @@
+pol_eng_dictionary = {
+    "zamek": "castle",
+    "woda": "water",
+    "gleba": "soil"
+    }
+
+copy_dictionary = pol_eng_dictionary.copy()
+print(copy_dictionary)
