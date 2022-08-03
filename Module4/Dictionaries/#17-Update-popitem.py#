@@ -1,0 +1,7 @@
+pol_swahili_dictionary = {"Ua": "flower"}
+
+pol_swahili_dictionary.update({"mchanga": "soil"})
+print(pol_swahili_dictionary)    
+
+pol_swahili_dictionary.popitem()
+print(pol_swahili_dictionary)    
