@@ -1,0 +1,9 @@
+pol_swahili_dictionary = {
+    "jumba": "castle",
+    "maji": "water",
+    "mchanga": "soil"
+    }
+
+pol_swahili_dictionary["maji"] = "waba"
+item = pol_swahili_dictionary["maji"]    
+print(item) 
