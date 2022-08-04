@@ -18,10 +18,9 @@ for i in range(8):
             answer = input("Do you want to fill the board with a piece ?, Type : Yes or No :")
             if answer == "No":
                 print("Great nice time !")
-                break
+                print(board)
             elif answer == "Yes":
                 board[i][j] = input("Kindly enter a valid chess piece to be inputed :")
                 print("The ", board[i][j], "has been entered successfully !")
             else:
                 print("That/'s not a valid choice, Kindly enter a choice again")
-print(board)
