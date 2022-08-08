@@ -40,7 +40,7 @@ def display_board(board):
        and prints it out to the console."""
 
 def enter_move(board):
-    value = input("Enter your move: ")
+    value = int(input("Enter your move: "))
     for i in range(3):
         for j in range(3):
             if value == board[i][j]:
