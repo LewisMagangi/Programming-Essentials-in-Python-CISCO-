@@ -76,11 +76,33 @@ def victory_for(board, sign):
          print("You won!")
     elif board[2][0] == "O" and board[2][1] == "O" and board[2][2] == "O":
          print("You won!")
+    elif board[0][0] == "X" and board[0][1] == "X" and board[0][2] == "X":
+        print("You lost!")
+    elif board[0][0] == "X" and board[1][1] == "X" and board[2][2] == "X":
+        print("You lost!")
+    elif board[0][0] == "X" and board[1][0] == "X" and board[2][0] == "X":
+         print("You lost!")
+    elif board[0][1] == "X" and board[1][1] == "X" and board[2][1] == "X":
+         print("You lost!")
+    elif board[0][2] == "X" and board[1][2] == "X" and board[2][2] == "X":
+         print("You lost!")
+    elif board[1][0] == "X" and board[1][1] == "X" and board[1][2] == "X":
+         print("You lost!")
+    elif board[0][2] == "X" and board[1][1] == "X" and board[2][0] == "X":
+         print("You lost!")
+    elif board[2][0] == "X" and board[2][1] == "X" and board[2][2] == "X":
+         print("You lost!")
     
-    
-    # The function analyzes the board's status in order to check if 
-    # the player using 'O's or 'X's has won the game
+    """The function analyzes the board's status in order to check if 
+       the player using 'O's or 'X's has won the game"""
 
 def draw_move(board):
-    # The function draws the computer's move and updates the board.
+    from random import randrange
+    value = randrange(1, 9)
+     for i in range(3):
+        for j in range(3):
+            if value == board[i][j]:
+                board[i][j] = "X"
+
+    """The function draws the computer's move and updates the board."""
 

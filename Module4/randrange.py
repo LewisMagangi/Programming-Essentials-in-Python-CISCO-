@@ -1,4 +1,4 @@
 from random import randrange
 
-for i in range(10):
-    print(randrange(8))
+for i in range(1):
+    print(randrange(1, 10))
