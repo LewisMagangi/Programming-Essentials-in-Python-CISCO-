@@ -116,29 +116,25 @@ def victory_for(board):
         print("It's a tie!")
         return True
 
-    return False
-
-global Bool 
+    return False 
 
 def draw_move(board):
     from random import randrange
     value = randrange(1, 9)
     if value not in make_list_of_free_fields(board):
-        Bool = False 
-        return Bool
+        return False
     elif value in make_list_of_free_fields(board):
         for i in range(3):
             for j in range(3):
                 if value == board[i][j]:
                     board[i][j] = "X"
         print(value)
-        Bool = True
-    return Bool
+    return True
 
 while not victory_for(board):
     while not enter_move(board):
         enter_move(board)
     display_board(board)
-    while Bool is not True:
+    while not draw_move(board):
         draw_move(board)
     display_board(board)
