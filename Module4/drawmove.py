@@ -1,5 +1,7 @@
 def draw_move():
     from random import randrange
     value = randrange(1, 9)
-    print(value)
-draw_move()
+    for i in range(3):
+        for j in range(3):
+            if value == board[i][j]:
+                board[i][j] = "X"
