@@ -40,11 +40,18 @@ def display_board(board):
        and prints it out to the console."""
 
 def enter_move(board):
-    value = int(input("Enter your move: "))
-    for i in range(3):
-        for j in range(3):
-            if value == board[i][j]:
-                board[i][j] = "O"
+    try:
+        value = int(input("Enter your move: "))
+    except TypeError:
+        print("Please enter an interger !")
+    if value <= 0 or value >= 10:
+        print("Please enter a value in the range 1 to 9 !")
+    else:
+        for i in range(3):
+            for j in range(3):
+                if value == board[i][j]:
+                    board[i][j] = "O"
+    return board
         
     """The function accepts the board's current status, asks the user about their move, 
        checks the input, and updates the board according to the user's decision."""
@@ -55,6 +62,7 @@ def make_list_of_free_fields(board):
         for j in range(3):
             if type(board[i][j]) is int:
                 free_field.append(board[i][j])
+    return free_field
                     
     """The function browses the board and builds a list of all the free squares; 
        the list consists of tuples, while each tuple is a pair of row and column numbers."""
@@ -100,10 +108,14 @@ def victory_for(board, sign):
 def draw_move(board):
     from random import randrange
     value = randrange(1, 9)
-     for i in range(3):
+    for i in range(3):
         for j in range(3):
             if value == board[i][j]:
                 board[i][j] = "X"
+    return board
+    
 
     """The function draws the computer's move and updates the board."""
 
+display_board(board)
+enter_move(board)
