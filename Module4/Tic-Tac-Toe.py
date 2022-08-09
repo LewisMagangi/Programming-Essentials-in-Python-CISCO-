@@ -40,21 +40,24 @@ def display_board(board):
        and prints it out to the console."""
 
 def enter_move(board):
+    value = input("Enter your move: ")
     try:
-        value = int(input("Enter your move: "))
-    except ValueError:
+        value = int(value)
+    except:
         print("Please enter an interger !")
-    try:
-        if value <= 0 or value >= 10:
-            print("Please enter a value in the range 1 to 9 !")
-    except UnboundLocalError:
-        print("The value entered is not applicable !")
+        return False
+    if value <= 0 or value >= 10:
+        print("Please enter an value between 0 and 10 !")
+        return False
+    elif value not in make_list_of_free_fields(board):
+        print("The square is occupied kindly choose another square !")
+        return False
     else:
         for i in range(3):
             for j in range(3):
                 if value == board[i][j]:
                     board[i][j] = "O"
-    return board
+    return True
         
     """The function accepts the board's current status, asks the user about their move, 
        checks the input, and updates the board according to the user's decision."""
