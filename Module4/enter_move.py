@@ -111,19 +111,34 @@ def victory_for(board):
         elif diagonal == o_list:
             print("You won!")
             return True
+
+    if len(make_list_of_free_fields(board)) == 0:
+        print("It's a tie!")
+        return True
+
     return False
+
+global Bool 
 
 def draw_move(board):
     from random import randrange
     value = randrange(1, 9)
-    for i in range(3):
-        for j in range(3):
-            if value == board[i][j]:
-                board[i][j] = "X"
+    if value not in make_list_of_free_fields(board):
+        Bool = False 
+        return Bool
+    elif value in make_list_of_free_fields(board):
+        for i in range(3):
+            for j in range(3):
+                if value == board[i][j]:
+                    board[i][j] = "X"
+        print(value)
+        Bool = True
+    return Bool
 
-while len(make_list_of_free_fields(board)) > 0 and not victory_for(board):
+while not victory_for(board):
     while not enter_move(board):
         enter_move(board)
     display_board(board)
-    draw_move(board)
+    while Bool is not True:
+        draw_move(board)
     display_board(board)
