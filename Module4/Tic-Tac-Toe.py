@@ -50,10 +50,10 @@ def enter_move(board):
        checks the input, and updates the board according to the user's decision."""
 
 def make_list_of_free_fields(board):
+    free_field = []
     for i in range(3):
         for j in range(3):
             if type(board[i][j]) is int:
-                free_field = []
                 free_field.append(board[i][j])
                     
     """The function browses the board and builds a list of all the free squares; 
