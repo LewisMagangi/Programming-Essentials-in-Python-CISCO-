@@ -14,16 +14,18 @@ def make_list_of_free_fields(board):
     return free_field
 
 def enter_move(board, free_field):
+    value = input("Enter your move: ")
+
     try:
-        value = int(input("Enter your move: "))
-    except ValueError:
-        print("Please enter an interger !")
-    try:
-        if value <= 0 or value >= 10:
-            print("Please enter a value in the range 1 to 9 !")
-    except UnboundLocalError:
-        print("The value entered is not applicable !")
-    make_list_of_free_fields(board)
+        value = int(value)
+    except:
+        print("The input must be an interger !")
+        return False
+    if value <= 0 or value >= 10:
+        print("Please enter a value between 0 and 10 !")
+    elif value not in make_list_of_free_fields
+        
+make_list_of_free_fields(board)
     if value in free_field:
         for i in range(3):
             for j in range(3):
