@@ -92,6 +92,7 @@ def victory_for(board, sign):
          print("You lost!")
     elif board[2][0] == "X" and board[2][1] == "X" and board[2][2] == "X":
          print("You lost!")
+         
     
     """The function analyzes the board's status in order to check if 
        the player using 'O's or 'X's has won the game"""
