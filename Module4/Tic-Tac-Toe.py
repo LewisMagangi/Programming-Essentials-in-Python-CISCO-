@@ -42,10 +42,13 @@ def display_board(board):
 def enter_move(board):
     try:
         value = int(input("Enter your move: "))
-    except TypeError:
+    except ValueError:
         print("Please enter an interger !")
-    if value <= 0 or value >= 10:
-        print("Please enter a value in the range 1 to 9 !")
+    try:
+        if value <= 0 or value >= 10:
+            print("Please enter a value in the range 1 to 9 !")
+    except UnboundLocalError:
+        print("The value entered is not applicable !")
     else:
         for i in range(3):
             for j in range(3):
