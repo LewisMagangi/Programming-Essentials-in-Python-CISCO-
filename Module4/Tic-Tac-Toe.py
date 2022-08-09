@@ -120,5 +120,5 @@ def draw_move(board):
 
     """The function draws the computer's move and updates the board."""
 
-display_board(board)
-enter_move(board)
+#display_board(board)
+#enter_move(board)
